@@ -1,0 +1,140 @@
+body{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #016A70;
+    font-size: 1.7rem;
+    font-family: 'Edu TAS Beginner', cursive;
+    letter-spacing: 5px;
+    user-select: none;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+h1{
+    color: #FFFFDD;
+    text-align: center;
+    font-size: 7rem;
+}
+
+.animated{
+    animation: fullOpacity 1s forwards;
+}
+
+.play-btn{
+    width: 30vh;
+    height: 8vh;
+    font-size: 2.5rem;
+    background-color: #D2DE32 ;
+    color: #FFFFDD;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Edu TAS Beginner', cursive; ;
+    margin: 0 auto;
+    
+}
+
+.play-btn:active{
+    background-color: #FFFFDD;
+    color: #D2DE32;
+}
+
+h2{
+    color: #D2DE32;   
+}
+
+.board{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 1fr;
+}
+
+.playerBoard{
+    display: flex;
+    grid-column: span 2;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.dices{
+    display: flex;
+    grid-column: span 2;
+    justify-content: space-evenly;
+}
+
+
+.dice{
+    background-color: #A2C579;
+    width: 300px;
+    height: 300px;
+    border-radius: 40px;
+}
+
+.dots{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+}
+
+.dot{
+    width: 60px;
+    height: 60px;
+    background-color: #ffffdd;
+    border-radius: 50%;
+    margin: auto;
+    opacity: 0;
+}
+
+.active{
+    animation-name: fullOpacity;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes fullOpacity {
+    0%{
+       
+            opacity: 0;
+        
+    }
+    100%{
+        
+            opacity: 1;
+        
+    }
+}
+
+
+@media (max-width:715px){
+    h1{
+        margin-top: 10px;
+        font-size: 5rem;
+    }
+    h2{
+        font-size: 2rem ;
+    }
+    .dice{
+        width: 150px;
+        height: 150px;
+    }
+    .dot{
+        width: 50%;
+        height: 50%;
+    }
+    .play-btn{
+        font-size: 100%;
+
+    }
+    .board{
+      margin-bottom: 10px;  
+    }
+}
